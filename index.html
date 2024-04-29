@@ -1,0 +1,181 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ovel task</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/utils/Draggable.min.js" integrity="sha512-qSMkmJNNoHwFdzaT+LgrH+gegU2D8sgBQTp4o8flIpmyyLB33GVnFCt2d+F9uNxWXoUZFNSwkH6SImVWPp3AJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="http://code.interactjs.io/interact-1.2.4.min.js"></script>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <h2>Ovel Task</h2>
+        <div class="progress">
+          <div id="pBar" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:1%">
+            <span class="sr-only">70% Complete</span>
+          </div>
+        </div>
+        <hr>
+        <h4>Step 1 - Create Ovel </h4>
+        <div class="container">
+            <h2>add data in fileds to create the ovels</h2>
+                    
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>ovel</th>
+                  <th>width - (x)</th>
+                  <th>height - (y)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ovel 1</td>
+                  <td><input type="number" id="ox1"></td>
+                  <td><input type="number" id="oy1"></td>
+                </tr>
+                <tr>
+                  <td>ovel 2</td>
+                  <td><input type="number" id="ox2"></td>
+                  <td><input type="number" id="oy2"></td>
+                </tr>
+                <tr>
+                  <td>ovel 3</td>
+                  <td><input type="number" id="ox3"></td>
+                  <td><input type="number" id="oy3"></td>
+                </tr>
+                <tr>
+                    <td>ovel 4</td>
+                    <td><input type="number" id="ox4" ></td>
+                    <td><input type="number" id="oy4"></td>
+                  </tr>
+                  <tr>
+                    <td>ovel 5</td>
+                    <td><input type="number" id="ox5"></td>
+                    <td><input type="number" id="oy5"></td>
+                  </tr>
+                  <tr>
+                    <td>ovel 6</td>
+                    <td><input type="number" id="ox6"></td>
+                    <td><input type="number" id="oy6"></td>
+                  </tr>
+              </tbody>
+            </table>
+            <button id="btngetVal">Create Ovel</button>
+          </div>
+          <hr>
+          <h5>Here is  your shells</h5>
+          <div class="showOvel" id="showOvels">
+
+            <!-- show dynamically COPT <div class="oval" id="ovel1"></div>
+            <div class="oval" id="ovel2"></div>
+            <div class="oval" id="ovel3"></div>
+            <div class="oval" id="ovel4"></div>
+            <div class="oval" id="ovel5"></div>
+            <div class="oval" id="ovel6"></div> -->
+          </div>
+    
+    <hr>
+    <hr>
+    <!--Need user input to ask for amount of cores to be created -->
+        <h4>Step 2 - Create cores </h4>
+        <div class="container">
+            <h2>add data in fileds to create the cores</h2>
+            <!-- Get user input to create that many cores-->
+            <div class="form-group">
+              <label for="coreCount">How many cores you want to create ?</label>
+              <input type="number" class="form-control" id="getCoreCount" aria-describedby="emailHelp" placeholder="Enter number of cores">
+            </div>
+            <button type="submit" class="btn btn-primary" id="btnGetCoreCount">Submit</button>
+              
+             <!-- dynamic table-->
+             <div id="table-container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">core</th>
+                    <th scope="col">width</th>
+                    <th scope="col">Height</th>
+                  </tr>
+                    
+                </thead>
+                <tbody id="DynamicTable">
+                  
+                </tbody>
+              </table>
+             </div>
+
+             <!-- dynamic table-->
+                    
+           <br>
+          <br>
+          <br>
+            <button id="btnCreateCore" class="btn btn-primary">Create core </button>
+          </div>
+          <hr>
+          <h5>Here is core</h5>
+         <div class="showOvel" id="coreBox">
+            <!-- div here are created from js dinamically-->
+          </div>
+           
+          <br>
+          <br>
+          <br>
+          <br>
+          <hr>
+          <hr>
+          <h4>Step 3 - find sutable shell to put cores in it </h4>
+          <button type="submit" class="btn btn-primary mt-3" id="btnfindOvel">Find Shell</button>
+          <br>
+          <br>
+          <button type="submit" class="btn btn-primary mt-3" id="btnCreateCoreSVG">Add Cores</button>
+          
+          <br>
+          <br>
+          <div class="rotatebtns">
+           <button id="increaseRotation">Increase Rotation</button>
+
+          <button id="decreaseRotation">Decrease Rotation</button>
+          </div>
+          
+          
+          
+          <hr>
+          <div class="result">
+          <div>
+            <svg id="dynamicCores"   width = "800" height = "800" style="border: black solid;"  onload="makeDraggable(evt)" >
+              <ellipse id="eclip"  rx="50" ry="100" cx="400" cy="400"
+                style="fill:rgb(192, 192, 180);stroke:rgb(0, 0, 0);stroke-width:3" />
+                <!--<rect width="100" height="100" />  added dynamically from js-->
+                <path d="M0 0 L800 0 M0 10 L800 10 M0 20 L800 20 M0 30 L800 30 M0 40 L800 40 M0 50 L800 50 M0 60 L800 60 M0 70 L800 70 M0 80 L800 80 M0 90 L800 90 M0 100 L800 100 M0 110 L800 110 M0 120 L800 120 M0 130 L800 130 M0 140 L800 140 M0 150 L800 150 M0 160 L800 160 M0 170 L800 170 M0 180 L800 180 M0 190 L800 190 M0 200 L800 200 M0 210 L800 210 M0 220 L800 220 M0 230 L800 230 M0 240 L800 240 M0 250 L800 250 M0 260 L800 260 M0 270 L800 270 M0 280 L800 280 M0 290 L800 290 M0 300 L800 300 M0 310 L800 310 M0 320 L800 320 M0 330 L800 330 M0 340 L800 340 M0 350 L800 350 M0 360 L800 360 M0 370 L800 370 M0 380 L800 380 M0 390 L800 390 M0 400 L800 400 M0 410 L800 410 M0 420 L800 420 M0 430 L800 430 M0 440 L800 440 M0 450 L800 450 M0 460 L800 460 M0 470 L800 470 M0 480 L800 480 M0 490 L800 490 M0 500 L800 500 M0 510 L800 510 M0 520 L800 520 M0 530 L800 530 M0 540 L800 540 M0 550 L800 550 M0 560 L800 560 M0 570 L800 570 M0 580 L800 580 M0 590 L800 590 M0 600 L800 600 M0 610 L800 610 M0 620 L800 620 M0 630 L800 630 M0 640 L800 640 M0 650 L800 650 M0 660 L800 660 M0 670 L800 670 M0 680 L800 680 M0 690 L800 690 M0 700 L800 700 M0 710 L800 710 M0 720 L800 720 M0 730 L800 730 M0 740 L800 740 M0 750 L800 750 M0 760 L800 760 M0 770 L800 770 M0 780 L800 780 M0 790 L800 790 M0 800 L800 800"
+                stroke="black" stroke-width="1" fill="none" opacity="0.2" />
+                <path d="M0 0 L0 800 M10 0 L10 800 M20 0 L20 800 M30 0 L30 800 M40 0 L40 800 M50 0 L50 800 M60 0 L60 800 M70 0 L70 800 M80 0 L80 800 M90 0 L90 800 M100 0 L100 800 M110 0 L110 800 M120 0 L120 800 M130 0 L130 800 M140 0 L140 800 M150 0 L150 800 M160 0 L160 800 M170 0 L170 800 M180 0 L180 800 M190 0 L190 800 M200 0 L200 800 M210 0 L210 800 M220 0 L220 800 M230 0 L230 800 M240 0 L240 800 M250 0 L250 800 M260 0 L260 800 M270 0 L270 800 M280 0 L280 800 M290 0 L290 800 M300 0 L300 800 M310 0 L310 800 M320 0 L320 800 M330 0 L330 800 M340 0 L340 800 M350 0 L350 800 M360 0 L360 800 M370 0 L370 800 M380 0 L380 800 M390 0 L390 800 M400 0 L400 800 M410 0 L410 800 M420 0 L420 800 M430 0 L430 800 M440 0 L440 800 M450 0 L450 800 M460 0 L460 800 M470 0 L470 800 M480 0 L480 800 M490 0 L490 800 M500 0 L500 800 M510 0 L510 800 M520 0 L520 800 M530 0 L530 800 M540 0 L540 800 M550 0 L550 800 M560 0 L560 800 M570 0 L570 800 M580 0 L580 800 M590 0 L590 800 M600 0 L600 800 M610 0 L610 800 M620 0 L620 800 M630 0 L630 800 M640 0 L640 800 M650 0 L650 800 M660 0 L660 800 M670 0 L670 800 M680 0 L680 800 M690 0 L690 800 M700 0 L700 800 M710 0 L710 800 M720 0 L720 800 M730 0 L730 800 M740 0 L740 800 M750 0 L750 800 M760 0 L760 800 M770 0 L770 800 M780 0 L780 800 M790 0 L790 800 M800 0 L800 800"
+                stroke="gray" stroke-width="1" fill="none" opacity="0.2"/>
+            </svg>
+          </div>
+         
+        </div>
+
+        
+        
+    
+        
+
+
+          <br>
+          <br>
+          
+         
+          
+      
+</body>
+</html>

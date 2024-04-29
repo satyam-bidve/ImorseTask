@@ -1,0 +1,45 @@
+.oval {
+  width: 100px; 
+  height: 150px; 
+  margin-left: 20px;
+  background-color: lightblue;
+  border-radius: 75% 75%; 
+  
+}
+
+.showOvel{
+  display: flex;
+ 
+}
+
+.result{
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.rotatebtns{
+  display: flex;
+  margin-left: 20px;
+}
+
+
+.core {
+  width: 100px; 
+  height: 150px; 
+  margin-left: 20px;
+  background-color: lightblue;
+  cursor: move;
+  resize: both;
+  overflow: auto;
+ 
+  
+  
+}
+
+.draggable {
+  cursor: move;
+  resize: both;
+  overflow: auto;
+}
+
